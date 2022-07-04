@@ -15,7 +15,8 @@ secrets:
 - kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring/cryptoKeys/encrypt-0
   secretEnv:
     GITHUB_TOKEN: CiQAtbfJtyTStdWm6kh4zgiAfCHoq0XzKgydWO5GiLsVmZG8YkASUgD+hIGkLdnisX+c5Hl6rqOVQT2mC05GiKqEQY27HOrArLLsivR+P5GVPGR4vcP/ILjv4oy/eMUnlC8un/AugLsOVO64Gnljf8GLJDh8HJh3G/g=
-    DOCKERHUB_TOKEN: CiQAtbfJt+798J6ZuLU1ooycRXjZiZcNYVYGhcMt/8m83S9TCpwSTgD+hIGkXgM1xQFEBNU2N5ANMmI29MtpSXRDtF82JaxAEtduAG+4OzfAbh8ozjHuHPnvX4KEHHRrtGcbdAx8pONTLBzfMx8Te5F7Bc64xg==
+    DOCKERHUB_TOKEN: CiQAtbfJt3oNwebunNgLggPzMo/bX7kCcuBOTai2fbpoO0gqnd0SPQD+hIGkQ2dn4bWrckQ6BUjt975kR+pyn2Nk49j4Z7UJ8x7YEQxN8btA7jrVR08aQJXS5WyfpVaXxlJqMUc=
+
 steps:
 - name: gcr.io/cloud-builders/git
   dir: "go/src/k8s.io"
@@ -41,12 +42,6 @@ steps:
   args:
   - "./compile-release-tools"
   - "krel"
-
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', 'echo $$DOCKERHUB_TOKEN']
-  secretEnv: ['DOCKERHUB_TOKEN']
-
 
 - name: gcr.io/k8s-staging-releng/k8s-cloud-builder:${_KUBE_CROSS_VERSION}
   dir: "/workspace"

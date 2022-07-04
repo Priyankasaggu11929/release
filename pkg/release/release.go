@@ -136,7 +136,7 @@ const (
 	PubBotRepoName = "sig-release"
 
 	DockerHubEnvKey   = "DOCKERHUB_TOKEN" // Env var containing the docker key
-	DockerHubUserName = "priyankasaggu119"       // Docker Hub username
+	DockerHubUserName = "psaggu"       // Docker Hub username
 
 	ProvenanceFilename = "provenance.json" // Name of the SLSA provenance file (used in stage and release)
 )
@@ -499,6 +499,7 @@ func DockerHubLogin() error {
 	if os.Getenv(DockerHubEnvKey) == "" {
 		return errors.New("unable to find docker token in the environment")
 	}
+
 	// Pipe the token into docker login
 	cmd := command.New(
 		"docker", "login", fmt.Sprintf("--username=%s", DockerHubUserName),
