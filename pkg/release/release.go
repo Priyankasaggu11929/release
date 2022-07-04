@@ -136,7 +136,7 @@ const (
 	PubBotRepoName = "sig-release"
 
 	DockerHubEnvKey   = "DOCKERHUB_TOKEN" // Env var containing the docker key
-	DockerHubUserName = "k8sreleng"       // Docker Hub username
+	DockerHubUserName = "priyankasaggu119"       // Docker Hub username
 
 	ProvenanceFilename = "provenance.json" // Name of the SLSA provenance file (used in stage and release)
 )
