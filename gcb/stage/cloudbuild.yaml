@@ -15,7 +15,7 @@ secrets:
 - kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring/cryptoKeys/encrypt-0
   secretEnv:
     GITHUB_TOKEN: CiQAtbfJtyTStdWm6kh4zgiAfCHoq0XzKgydWO5GiLsVmZG8YkASUgD+hIGkLdnisX+c5Hl6rqOVQT2mC05GiKqEQY27HOrArLLsivR+P5GVPGR4vcP/ILjv4oy/eMUnlC8un/AugLsOVO64Gnljf8GLJDh8HJh3G/g=
-    DOCKERHUB_TOKEN: CiQAtbfJtxTkuHMcFKgdqMlEzUapxJSTJVL1w0P7WdlUCaEi+GMSTgD+hIGkG36zUwGoeMox1s6WrArO/FL5xNK52Zpap05mA5mQOlAjUcOUBv30QmE2iAOSGLDL3ahj2qsxoMzFwigaSRsL6qKAG2NpSjExkg==
+    DOCKERHUB_TOKEN: CiQAtbfJt+798J6ZuLU1ooycRXjZiZcNYVYGhcMt/8m83S9TCpwSTgD+hIGkXgM1xQFEBNU2N5ANMmI29MtpSXRDtF82JaxAEtduAG+4OzfAbh8ozjHuHPnvX4KEHHRrtGcbdAx8pONTLBzfMx8Te5F7Bc64xg==
 steps:
 - name: gcr.io/cloud-builders/git
   dir: "go/src/k8s.io"
