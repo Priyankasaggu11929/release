@@ -12,10 +12,10 @@ timeout: 14400s
 #
 # (Please do not remove this security notice.)
 secrets:
-- kmsKeyName: projects/k8s-releng-prod/locations/global/keyRings/release/cryptoKeys/encrypt-0
+- kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring
   secretEnv:
-    GITHUB_TOKEN: CiQAIkWjMHZABAFJqEFQir1WipsO3rAGkhw1pwhp1er/m3px/kESUQBLz1D+hzzlrovRVuetP+sCqzjfKZl/iB0aiQIT36imOk8j7laYDZjprxGGQQQiUVaqYvstroJH3D53f4JKQHzXUvWziSSnhH3HFZz++RT/yQ==
-    DOCKERHUB_TOKEN: CiQAIkWjMJDKU6Hu3pJIBf31dIl7xJQQEiccN7k1cCzGadGoT2gSTQBLz1D+uc9PMusYnFvXtJi25OqEUktDJs28d09jDyj9gcyTx9iX/JvOE3Dn2qnhrjwrUMk5bBhFjR7dHCr4mJgEVD5dXrd6yLGbDBu2
+    GITHUB_TOKEN: CiQAXgH79OE3xZKxZtwSjGayFCEutz4y+Z6pZaV/kV6dcQheCHsSUgBEdOA1ddT7haHXl+iGPDMlvAa8LdSB+reWz6oGkr9lj3AhYu5KnfmHjFN8HHV3PXSo2ws0ZanYoxorUc7tIZ8J33YeM7bbeeLTWb4xce5wyWA=
+    DOCKERHUB_TOKEN: CiQAOZi1rlWUcPJ8/oZLEkL90orulRv66NM2FIGceDAXe+0qXMASTgALEkZGMzOhuz8KIj8BX/jnOyaAhFzxDHCMv1yYC/4LrTfClaMsi17/ldNG2vDLB6nyaZJERRxXWF+UNXWEpxrmS1W0T5EB7wHFa19v9Q==
 
 steps:
 - name: gcr.io/cloud-builders/git
@@ -53,7 +53,7 @@ steps:
   - "K8S_ORG=${_K8S_ORG}"
   - "K8S_REPO=${_K8S_REPO}"
   - "K8S_REF=${_K8S_REF}"
-  - GOOGLE_SERVICE_ACCOUNT_NAME=krel-staging@k8s-releng-prod.iam.gserviceaccount.com
+  - GOOGLE_SERVICE_ACCOUNT_NAME=psaggu-krel-staging@psaggu-gcp.iam.gserviceaccount.com
   secretEnv:
   - GITHUB_TOKEN
   - DOCKERHUB_TOKEN

@@ -44,16 +44,18 @@ import (
 const (
 	DefaultToolRepo = "release"
 	DefaultToolRef  = git.DefaultBranch
-	DefaultToolOrg  = git.DefaultGithubOrg
+	//DefaultToolOrg  = git.DefaultGithubOrg
+	DefaultToolOrg  = "Priyankasaggu11929"
 
-	DefaultK8sOrg  = git.DefaultGithubOrg
+	//DefaultK8sOrg  = git.DefaultGithubOrg
+	DefaultK8sOrg  = "Priyankasaggu11929"
 	DefaultK8sRepo = git.DefaultGithubRepo
 	DefaultK8sRef  = git.DefaultRef
 
 	// TODO(vdf): Need to reference K8s Infra project here
-	DefaultKubernetesStagingProject = "kubernetes-release-test"
-	DefaultRelengStagingTestProject = "k8s-staging-releng-test"
-	DefaultRelengStagingProject     = "k8s-staging-releng"
+	DefaultKubernetesStagingProject = "psaggu-gcp"
+	DefaultRelengStagingTestProject = "psaggu-gcp"
+	DefaultRelengStagingProject     = "psaggu-gcp"
 	DefaultDiskSize                 = "500"
 	BucketPrefix                    = "kubernetes-release-"
 	BucketPrefixK8sInfra            = "k8s-release-"
@@ -100,10 +102,10 @@ const (
 	CIBucketK8sInfra = "k8s-release-dev"
 
 	// TestBucket is the default bucket for mocked Kubernetes releases
-	TestBucket = "kubernetes-release-gcb"
+	TestBucket = "psaggu-kubernetes-release-gcb"
 
 	// ProductionBucket is the default bucket for Kubernetes releases
-	ProductionBucket = "kubernetes-release"
+	ProductionBucket = "psaggu-kubernetes-release"
 
 	// ProductionBucketURL is the url for the ProductionBucket
 	ProductionBucketURL = "https://dl.k8s.io"
