@@ -153,7 +153,8 @@ const (
 func New() *Options {
 	return &Options{
 		DiscoverMode:       RevisionDiscoveryModeNONE,
-		GithubOrg:          git.DefaultGithubOrg,
+		//GithubOrg:          git.DefaultGithubOrg,
+		GithubOrg:          "Priyankasaggu11929",
 		GithubRepo:         git.DefaultGithubRepo,
 		Format:             FormatMarkdown,
 		GoTemplate:         GoTemplateDefault,

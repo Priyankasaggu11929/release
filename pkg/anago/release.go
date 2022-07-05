@@ -593,7 +593,8 @@ func (d *DefaultRelease) UpdateGitHubPage() error {
 		UpdateIfReleaseExists: true,
 		Name:                  "Kubernetes " + d.state.versions.Prime(),
 		Draft:                 false,
-		Owner:                 git.DefaultGithubOrg,
+		//Owner:                 git.DefaultGithubOrg,
+		Owner:                 "Priyankasaggu11929",
 		Repo:                  git.DefaultGithubRepo,
 		// PageTemplate: ,     // If we use a custom template, define it here
 		Substitutions: map[string]string{
