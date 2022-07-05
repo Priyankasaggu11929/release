@@ -284,9 +284,9 @@ func (s *Stage) Run() error {
 	}
 
 	logger.WithStep().Info("Generating changelog")
-	if err := s.client.GenerateChangelog(); err != nil {
-		return fmt.Errorf("generate changelog: %w", err)
-	}
+	//if err := s.client.GenerateChangelog(); err != nil {
+	//	return fmt.Errorf("generate changelog: %w", err)
+	//}
 
 	logger.WithStep().Info("Verifying artifacts")
 	if err := s.client.VerifyArtifacts(); err != nil {
