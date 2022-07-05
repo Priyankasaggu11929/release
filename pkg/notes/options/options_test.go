@@ -29,10 +29,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 	"sigs.k8s.io/release-utils/command"
 
-	kgit "sigs.k8s.io/release-sdk/git"
+	kgit "github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 type testOptions struct {

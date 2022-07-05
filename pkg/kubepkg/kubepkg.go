@@ -31,7 +31,7 @@ import (
 
 	"k8s.io/release/pkg/kubepkg/options"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 	"sigs.k8s.io/release-utils/command"
 	"sigs.k8s.io/release-utils/util"
 )

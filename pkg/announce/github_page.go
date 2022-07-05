@@ -29,8 +29,8 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"sigs.k8s.io/bom/pkg/spdx"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 	"sigs.k8s.io/release-utils/hash"
 	"sigs.k8s.io/release-utils/util"
 )

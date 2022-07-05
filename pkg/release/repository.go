@@ -26,7 +26,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 // Repo is a wrapper around a kubernetes/release repository

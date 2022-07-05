@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 )
 
 const (

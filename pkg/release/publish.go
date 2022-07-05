@@ -25,8 +25,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"sigs.k8s.io/release-sdk/gcli"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/gcli"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/http"
 	"sigs.k8s.io/release-utils/util"
 )

@@ -26,7 +26,7 @@ import (
 	"k8s.io/release/pkg/changelog"
 	"k8s.io/release/pkg/changelog/changelogfakes"
 	"k8s.io/release/pkg/notes"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 )
 
 func TestRun(t *testing.T) {

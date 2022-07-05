@@ -20,7 +20,7 @@ package releasefakes
 import (
 	"sync"
 
-	"sigs.k8s.io/release-sdk/sign"
+	"github.com/Priyankasaggu11929/release-sdk/sign"
 )
 
 type FakeImageImpl struct {

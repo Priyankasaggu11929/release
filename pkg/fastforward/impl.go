@@ -22,7 +22,7 @@ import (
 	"k8s.io/release/pkg/gcp/gcb"
 	"k8s.io/release/pkg/release"
 
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 	"sigs.k8s.io/release-utils/env"
 	"sigs.k8s.io/release-utils/util"
 )

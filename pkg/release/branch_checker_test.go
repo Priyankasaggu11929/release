@@ -25,7 +25,7 @@ import (
 
 	"k8s.io/release/pkg/release"
 	"k8s.io/release/pkg/release/releasefakes"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 func TestNeedsCreation(t *testing.T) {

@@ -21,7 +21,7 @@ import (
 	"sync"
 
 	"k8s.io/release/pkg/gcp/gcb"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 type FakeImpl struct {

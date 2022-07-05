@@ -25,7 +25,7 @@ import (
 
 	"k8s.io/release/pkg/fastforward"
 	"k8s.io/release/pkg/release"
-	kgit "sigs.k8s.io/release-sdk/git"
+	kgit "github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 var ffOpts = &fastforward.Options{}

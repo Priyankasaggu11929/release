@@ -24,7 +24,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"sigs.k8s.io/release-sdk/regex"
+	"github.com/Priyankasaggu11929/release-sdk/regex"
 	"sigs.k8s.io/release-utils/util"
 )
 

@@ -30,8 +30,8 @@ import (
 
 	"github.com/google/go-github/v45/github"
 	"github.com/sirupsen/logrus"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/github/githubfakes"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/github/githubfakes"
 )
 
 func TestMain(m *testing.M) {

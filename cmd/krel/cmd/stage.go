@@ -25,7 +25,7 @@ import (
 
 	"k8s.io/release/pkg/anago"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 )
 
 // stageCmd represents the subcommand for `krel stage`

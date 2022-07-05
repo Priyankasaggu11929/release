@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"strings"
 
-	"sigs.k8s.io/release-sdk/gcli"
+	"github.com/Priyankasaggu11929/release-sdk/gcli"
 )
 
 func GetCurrentGCPUser() (string, error) {

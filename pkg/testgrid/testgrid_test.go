@@ -26,7 +26,7 @@ import (
 
 	"k8s.io/release/pkg/testgrid"
 	"k8s.io/release/pkg/testgrid/testgridfakes"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 func newSut() (*testgrid.TestGrid, *testgridfakes.FakeClient) {

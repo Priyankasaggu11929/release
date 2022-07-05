@@ -26,7 +26,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 )
 
 // MapProvider interface that obtains release notes maps from a source

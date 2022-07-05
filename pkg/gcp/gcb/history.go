@@ -28,7 +28,7 @@ import (
 
 	"k8s.io/release/pkg/gcp/build"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 // History is the main structure for retrieving the GCB history output.

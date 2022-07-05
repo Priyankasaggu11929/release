@@ -28,9 +28,9 @@ import (
 
 	"sigs.k8s.io/bom/pkg/license"
 	"sigs.k8s.io/bom/pkg/spdx"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/github"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/tar"
 	"sigs.k8s.io/release-utils/util"
 )

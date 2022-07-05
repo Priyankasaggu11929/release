@@ -30,7 +30,7 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"k8s.io/release/pkg/notes"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 )
 
 //counterfeiter:generate . ClientImplementation

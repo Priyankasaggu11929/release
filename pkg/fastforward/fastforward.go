@@ -26,8 +26,8 @@ import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/release/pkg/gcp/gcb"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 )
 
 // Options is the main structure for configuring a fast forward.

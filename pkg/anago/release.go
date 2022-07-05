@@ -28,8 +28,8 @@ import (
 	"k8s.io/release/pkg/build"
 	"k8s.io/release/pkg/gcp/gcb"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/log"
 	"sigs.k8s.io/release-utils/util"
 )

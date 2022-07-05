@@ -26,7 +26,7 @@ import (
 	"github.com/google/go-containerregistry/pkg/crane"
 	"github.com/sirupsen/logrus"
 
-	"sigs.k8s.io/release-sdk/sign"
+	"github.com/Priyankasaggu11929/release-sdk/sign"
 	"sigs.k8s.io/release-utils/command"
 )
 

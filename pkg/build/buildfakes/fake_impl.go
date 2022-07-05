@@ -20,7 +20,7 @@ package buildfakes
 import (
 	"sync"
 
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 type FakeImpl struct {

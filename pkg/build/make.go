@@ -22,7 +22,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"k8s.io/release/pkg/release"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 	"sigs.k8s.io/release-utils/command"
 )
 

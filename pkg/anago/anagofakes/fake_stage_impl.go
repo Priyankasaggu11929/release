@@ -30,7 +30,7 @@ import (
 	"k8s.io/release/pkg/release"
 	"sigs.k8s.io/bom/pkg/provenance"
 	"sigs.k8s.io/bom/pkg/spdx"
-	"sigs.k8s.io/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/git"
 )
 
 type FakeStageImpl struct {

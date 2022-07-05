@@ -42,7 +42,7 @@ import (
 	"gopkg.in/yaml.v2"
 
 	"k8s.io/release/pkg/notes/options"
-	"sigs.k8s.io/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 )
 
 var (

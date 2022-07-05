@@ -25,6 +25,8 @@ import (
 
 	"github.com/blang/semver"
 	"github.com/sirupsen/logrus"
+	"github.com/Priyankasaggu11929/release-sdk/git"
+	"github.com/Priyankasaggu11929/release-sdk/github"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/extension"
 	"github.com/yuin/goldmark/parser"
@@ -34,9 +36,9 @@ import (
 	"k8s.io/release/pkg/notes"
 	"k8s.io/release/pkg/notes/document"
 	"k8s.io/release/pkg/notes/options"
-	"sigs.k8s.io/release-sdk/git"
-	"sigs.k8s.io/release-sdk/github"
-	"sigs.k8s.io/release-sdk/object"
+	//"github.com/Priyankasaggu11929/release-sdk/git"
+	//"github.com/Priyankasaggu11929/release-sdk/github"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/http"
 	"sigs.k8s.io/release-utils/util"
 )

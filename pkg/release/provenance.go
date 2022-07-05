@@ -28,7 +28,7 @@ import (
 
 	"sigs.k8s.io/bom/pkg/provenance"
 	"sigs.k8s.io/bom/pkg/spdx"
-	"sigs.k8s.io/release-sdk/object"
+	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/util"
 )
 
