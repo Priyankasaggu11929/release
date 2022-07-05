@@ -14,7 +14,7 @@ timeout: 14400s
 secrets:
 - kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring/cryptoKeys/encrypt-0
   secretEnv:
-    GITHUB_TOKEN: CiQAtbfJtyTStdWm6kh4zgiAfCHoq0XzKgydWO5GiLsVmZG8YkASUgD+hIGkLdnisX+c5Hl6rqOVQT2mC05GiKqEQY27HOrArLLsivR+P5GVPGR4vcP/ILjv4oy/eMUnlC8un/AugLsOVO64Gnljf8GLJDh8HJh3G/g=
+    GITHUB_TOKEN: CiQAtbfJt0itps/EQKz/ha2MsU9vTDneLbyz85GiQmuxAZVDKe4SUgD+hIGkQBuRN8accCyMnTSR0vTmk5OLVw7iBYOCoS5zpYPVa1IuECDRgxIN8X9mpytkSKXKKWA95fcIkDwUvFN43zBz9sp9HN2Czvg3f2/G7ns=
     DOCKERHUB_TOKEN: CiQAtbfJt3oNwebunNgLggPzMo/bX7kCcuBOTai2fbpoO0gqnd0SPQD+hIGkQ2dn4bWrckQ6BUjt975kR+pyn2Nk49j4Z7UJ8x7YEQxN8btA7jrVR08aQJXS5WyfpVaXxlJqMUc=
 
 steps:
@@ -55,8 +55,8 @@ steps:
   - "K8S_REF=${_K8S_REF}"
   - GOOGLE_SERVICE_ACCOUNT_NAME=psaggu-krel-staging@psaggu-gcp.iam.gserviceaccount.com
   secretEnv:
-  - GITHUB_TOKEN
-  - DOCKERHUB_TOKEN
+  - "GITHUB_TOKEN"
+  - "DOCKERHUB_TOKEN"
   args:
   - "bin/krel"
   - "stage"
