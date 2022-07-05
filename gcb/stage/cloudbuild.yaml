@@ -43,11 +43,6 @@ steps:
   - "./compile-release-tools"
   - "krel"
 
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', 'docker login --username=psaggu --password=$$DOCKERHUB_TOKEN']
-  secretEnv: ['DOCKERHUB_TOKEN']
-
 - name: gcr.io/k8s-staging-releng/k8s-cloud-builder:${_KUBE_CROSS_VERSION}
   dir: "/workspace"
   env:

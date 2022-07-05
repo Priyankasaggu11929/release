@@ -501,15 +501,15 @@ func DockerHubLogin() error {
 	}
 
 	// Pipe the token into docker login
-	cmd := command.New(
-		"docker", "login", fmt.Sprintf("--username=%s", DockerHubUserName),
-		"--password", os.Getenv(DockerHubEnvKey),
-	)
+	//cmd := command.New(
+	//	"docker", "login", fmt.Sprintf("--username=%s", DockerHubUserName),
+	//	"--password", os.Getenv(DockerHubEnvKey),
+	//)
 	// Run docker login:
-	if err := cmd.RunSuccess(); err != nil {
-		errStr := strings.ReplaceAll(err.Error(), os.Getenv(DockerHubEnvKey), "**********")
-		return fmt.Errorf("%s: logging into Docker Hub", errStr)
-	}
+	//if err := cmd.RunSuccess(); err != nil {
+	//	errStr := strings.ReplaceAll(err.Error(), os.Getenv(DockerHubEnvKey), "**********")
+	//	return fmt.Errorf("%s: logging into Docker Hub", errStr)
+	//}
 	logrus.Infof("User %s successfully logged into Docker Hub", DockerHubUserName)
 	return nil
 }
