@@ -14,8 +14,8 @@ timeout: 14400s
 secrets:
 - kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring/cryptoKeys/encrypt-0
   secretEnv:
-    GITHUB_TOKEN: CiQAtbfJt0itps/EQKz/ha2MsU9vTDneLbyz85GiQmuxAZVDKe4SUgD+hIGkQBuRN8accCyMnTSR0vTmk5OLVw7iBYOCoS5zpYPVa1IuECDRgxIN8X9mpytkSKXKKWA95fcIkDwUvFN43zBz9sp9HN2Czvg3f2/G7ns=
-    DOCKERHUB_TOKEN: CiQAtbfJt3oNwebunNgLggPzMo/bX7kCcuBOTai2fbpoO0gqnd0SPQD+hIGkQ2dn4bWrckQ6BUjt975kR+pyn2Nk49j4Z7UJ8x7YEQxN8btA7jrVR08aQJXS5WyfpVaXxlJqMUc=
+    GITHUB_TOKEN: CiQAtbfJt5VzW97aNFTKRqSioJ77eDLkU3DDu2XYmPArCcji0WwSUQD+hIGktftNjYPqZH9E+wuGsLoqmbuoZBS/OHW5Zv/zp8Al2hgzfNfs6+Z+4ZzgBI90zOjBVpHjhLqQbeFkTX1UDEp1IQAV8Qoi5QPWRSVYXw==
+    DOCKERHUB_TOKEN: CiQAtbfJt6DGK8Bg4x5Xn2CHJYncOgMHOWS6oryyBJRyt08UkwISTQD+hIGkhTxhX+JNahCcQmWr2cGiWeC1yIcxe5Hi5mEa92frwjlu96BHgjxjyXM1sw7e/N2HQOG8XO2koJp2wj3BInXdQU1vz6Iyx5jg 
 
 steps:
 - name: gcr.io/cloud-builders/git

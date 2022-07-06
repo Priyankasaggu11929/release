@@ -386,8 +386,12 @@ func (i *Images) GetManifestImages(
 				}
 
 				binary := tagMatches[1]
+				//newTag := filepath.Join(
+				//	registry,
+				//	strings.TrimSuffix(binary, "-"+arch),
+				//)
 				newTag := filepath.Join(
-					registry,
+					"us-central1-docker.pkg.dev/psaggu-gcp/psaggu-k8s-staging-kubernetes",
 					strings.TrimSuffix(binary, "-"+arch),
 				)
 				newTagWithArch := fmt.Sprintf("%s-%s:%s", newTag, arch, version)

@@ -283,7 +283,7 @@ func (s *Stage) Run() error {
 		return fmt.Errorf("build release: %w", err)
 	}
 
-	logger.WithStep().Info("Generating changelog")
+	//logger.WithStep().Info("Generating changelog")
 	//if err := s.client.GenerateChangelog(); err != nil {
 	//	return fmt.Errorf("generate changelog: %w", err)
 	//}
