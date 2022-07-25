@@ -505,6 +505,12 @@ func DockerHubLogin() error {
 		"docker", "login", fmt.Sprintf("--username=%s", DockerHubUserName),
 		"--password", os.Getenv(DockerHubEnvKey),
 	)
+
+	//TODO: psaggu to remove
+	//cmd := command.New(
+	//	"docker", "login", "https://us-central1-docker.pkg.dev", "--username", "oauth2accesstoken", "--password", "$(gcloud auth print-access-token   --impersonate-service-account psaggu-krel-staging@psaggu-gcp.iam.gserviceaccount.com)",
+	//)
+
 	// Run docker login:
 	if err := cmd.RunSuccess(); err != nil {
 		errStr := strings.ReplaceAll(err.Error(), os.Getenv(DockerHubEnvKey), "**********")

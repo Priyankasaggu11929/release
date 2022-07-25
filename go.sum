@@ -222,8 +222,8 @@ github.com/PaesslerAG/gval v1.0.0/go.mod h1:y/nm5yEyTeX6av0OfKJNp9rBNj2XrGhAf5+v
 github.com/PaesslerAG/jsonpath v0.1.0/go.mod h1:4BzmtoM/PI8fPO4aQGIusjGxGir2BzcV0grWtFzq1Y8=
 github.com/PaesslerAG/jsonpath v0.1.1 h1:c1/AToHQMVsduPAa4Vh6xp2U0evy4t8SWp8imEsylIk=
 github.com/PaesslerAG/jsonpath v0.1.1/go.mod h1:lVboNxFGal/VwW6d9JzIy56bUsYAP6tH/x80vjnCseY=
-github.com/Priyankasaggu11929/release-sdk v0.9.7 h1:GtWgEEQFBIXRyJhsLeYTkwEwVu/BP/P5iVaAm68sKIU=
-github.com/Priyankasaggu11929/release-sdk v0.9.7/go.mod h1:IAnPNskyAlPnAs7D9VuR40rRCut6Zp/3kL40D1bx7Js=
+github.com/Priyankasaggu11929/release-sdk v0.9.15 h1:IoI94yj36hShMEfNn66MPZ1nkMa8HP+lPD4s4nYFvKU=
+github.com/Priyankasaggu11929/release-sdk v0.9.15/go.mod h1:IAnPNskyAlPnAs7D9VuR40rRCut6Zp/3kL40D1bx7Js=
 github.com/ProtonMail/go-crypto v0.0.0-20210428141323-04723f9f07d7 h1:YoJbenK9C67SkzkDfmQuVln04ygHj3vjZfd9FL+GmQQ=
 github.com/ProtonMail/go-crypto v0.0.0-20210428141323-04723f9f07d7/go.mod h1:z4/9nQmJSSwwds7ejkxaJwO37dru3geImFUdJlaLzQo=
 github.com/PuerkitoBio/purell v1.1.1/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=

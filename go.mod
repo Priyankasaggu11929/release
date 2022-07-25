@@ -5,7 +5,7 @@ go 1.18
 require (
 	cloud.google.com/go/storage v1.23.0
 	github.com/GoogleCloudPlatform/testgrid v0.0.38
-	github.com/Priyankasaggu11929/release-sdk v0.9.7
+	github.com/Priyankasaggu11929/release-sdk v0.9.15
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/cheggaaa/pb/v3 v3.0.8
 	github.com/go-git/go-git/v5 v5.4.2
