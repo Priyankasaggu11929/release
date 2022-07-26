@@ -12,9 +12,9 @@ timeout: 14400s
 #
 # (Please do not remove this security notice.)
 secrets:
-- kmsKeyName: projects/k8s-releng-prod/locations/global/keyRings/release/cryptoKeys/encrypt-0
+- kmsKeyName: projects/psaggu-gcp/locations/global/keyRings/psaggu-key-ring/cryptoKeys/encrypt-0
   secretEnv:
-    GITHUB_TOKEN: CiQAIkWjMODH+TR8+6KmsAValHBKkX2PjVWSzyNdScGCIl0rBlYSUQBLz1D++mrhyd+wXohoQEGDuyQHvFzQyT7NEvI2BR/WBmnu1S9+E5GgER8OOnaQg+dGEMrYzEQIiTOB8WPxU7ecsIyo0AuegcBH24dj9L2tDw==
+    GITHUB_TOKEN: CiQAtbfJt5VzW97aNFTKRqSioJ77eDLkU3DDu2XYmPArCcji0WwSUQD+hIGktftNjYPqZH9E+wuGsLoqmbuoZBS/OHW5Zv/zp8Al2hgzfNfs6+Z+4ZzgBI90zOjBVpHjhLqQbeFkTX1UDEp1IQAV8Qoi5QPWRSVYXw==
 
 steps:
 - name: gcr.io/cloud-builders/git
@@ -51,7 +51,7 @@ steps:
   - "K8S_ORG=${_K8S_ORG}"
   - "K8S_REPO=${_K8S_REPO}"
   - "K8S_REF=${_K8S_REF}"
-  - GOOGLE_SERVICE_ACCOUNT_NAME=krel-staging@k8s-releng-prod.iam.gserviceaccount.com
+  - GOOGLE_SERVICE_ACCOUNT_NAME=psaggu-krel-staging@psaggu-gcp.iam.gserviceaccount.com
   secretEnv:
   - GITHUB_TOKEN
   args:

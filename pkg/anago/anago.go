@@ -298,10 +298,10 @@ func (s *Stage) Run() error {
 		return fmt.Errorf("generating sbom: %w", err)
 	}
 
-	logger.WithStep().Info("Staging artifacts")
-	if err := s.client.StageArtifacts(); err != nil {
-		return fmt.Errorf("stage release artifacts: %w", err)
-	}
+	//logger.WithStep().Info("Staging artifacts")
+	//if err := s.client.StageArtifacts(); err != nil {
+	//	return fmt.Errorf("stage release artifacts: %w", err)
+	//}
 
 	logger.Info("Stage done")
 	return nil
