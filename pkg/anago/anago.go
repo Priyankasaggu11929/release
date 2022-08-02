@@ -405,37 +405,37 @@ func (r *Release) Run() error {
 		return fmt.Errorf("prepare workspace: %w", err)
 	}
 
-	logger.WithStep().Info("Checking artifacts provenance")
-	if err := r.client.CheckProvenance(); err != nil {
+	//logger.WithStep().Info("Checking artifacts provenance")
+	//if err := r.client.CheckProvenance(); err != nil {
 		// For now, we ony notify provenance errors as not to treat
 		// them as fatal while we finish testing SLSA compliance.
-		logrus.Warnf("Unable to check provenance attestation: %v", err)
-	}
+	//	logrus.Warnf("Unable to check provenance attestation: %v", err)
+	//}
 
-	logger.WithStep().Info("Pushing artifacts")
-	if err := r.client.PushArtifacts(); err != nil {
-		return fmt.Errorf("push artifacts: %w", err)
-	}
+	//logger.WithStep().Info("Pushing artifacts")
+	//if err := r.client.PushArtifacts(); err != nil {
+	//	return fmt.Errorf("push artifacts: %w", err)
+	//}
 
 	logger.WithStep().Info("Pushing git objects")
 	if err := r.client.PushGitObjects(); err != nil {
 		return fmt.Errorf("push git objects: %w", err)
 	}
 
-	logger.WithStep().Info("Creating announcement")
-	if err := r.client.CreateAnnouncement(); err != nil {
-		return fmt.Errorf("create announcement: %w", err)
-	}
+	//logger.WithStep().Info("Creating announcement")
+	//if err := r.client.CreateAnnouncement(); err != nil {
+	//	return fmt.Errorf("create announcement: %w", err)
+	//}
 
 	logger.WithStep().Info("Updating GitHub release page")
 	if err := r.client.UpdateGitHubPage(); err != nil {
 		return fmt.Errorf("updating github page: %w", err)
 	}
 
-	logger.WithStep().Info("Archiving release")
-	if err := r.client.Archive(); err != nil {
-		return fmt.Errorf("archive release: %w", err)
-	}
+	//logger.WithStep().Info("Archiving release")
+	//if err := r.client.Archive(); err != nil {
+	//	return fmt.Errorf("archive release: %w", err)
+	//}
 
 	logger.Info("Release done")
 	return nil
