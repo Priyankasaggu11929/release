@@ -129,9 +129,12 @@ func (i *Images) Publish(registry, version, buildPath string) error {
 				return fmt.Errorf("push container image: %w", err)
 			}
 
-			if err := i.SignImage(i.signer, newTagWithArch); err != nil {
-				return fmt.Errorf("sign container image: %w", err)
-			}
+			// TODO: psaggu
+			// Skipping image signing step
+
+			//if err := i.SignImage(i.signer, newTagWithArch); err != nil {
+			//	return fmt.Errorf("sign container image: %w", err)
+			//}
 
 			if err := i.Execute(
 				"docker", "rmi", origTag, newTagWithArch,
@@ -187,9 +190,11 @@ func (i *Images) Publish(registry, version, buildPath string) error {
 			return fmt.Errorf("push manifest: %w", err)
 		}
 
-		if err := i.SignImage(i.signer, imageVersion); err != nil {
-			return fmt.Errorf("sign manifest list: %w", err)
-		}
+		// TODO: psaggu
+
+		//if err := i.SignImage(i.signer, imageVersion); err != nil {
+		//	return fmt.Errorf("sign manifest list: %w", err)
+		//}
 	}
 
 	return nil

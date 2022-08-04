@@ -30,6 +30,7 @@ import (
 	"sigs.k8s.io/bom/pkg/spdx"
 	"github.com/Priyankasaggu11929/release-sdk/git"
 	"github.com/Priyankasaggu11929/release-sdk/github"
+	// TODO: psaggu
 	"github.com/Priyankasaggu11929/release-sdk/object"
 	"sigs.k8s.io/release-utils/tar"
 	"sigs.k8s.io/release-utils/util"
@@ -105,6 +106,8 @@ func PrepareWorkspaceStage(directory string, noMock bool) error {
 // the staged sources on the provided bucket.
 func PrepareWorkspaceRelease(directory, buildVersion, bucket string) error {
 	logrus.Infof("Preparing workspace for release in %s", directory)
+
+	//TODO: psaggu
 	logrus.Infof("Searching for staged %s on %s", SourcesTar, bucket)
 	tempDir, err := os.MkdirTemp("", "staged-")
 	if err != nil {
@@ -144,6 +147,7 @@ func PrepareWorkspaceRelease(directory, buildVersion, bucket string) error {
 		Scheme: "https",
 		User:   url.UserPassword("git", token),
 		Host:   "github.com",
+		//TODO: psaggu
 		//Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
 		Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
 	}).String()); err != nil {

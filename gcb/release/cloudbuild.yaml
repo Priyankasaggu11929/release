@@ -33,6 +33,7 @@ steps:
     echo "Checking out ${_TOOL_REF}"
     git checkout ${_TOOL_REF}
 
+# TODO: psaggu
 - name: gcr.io/k8s-staging-releng/k8s-cloud-builder:${_KUBE_CROSS_VERSION_LATEST}
   dir: "go/src/k8s.io/release"
   env:
@@ -42,6 +43,7 @@ steps:
   - "./compile-release-tools"
   - "krel"
 
+# TODO: tbcby psaggu 
 - name: gcr.io/k8s-staging-releng/k8s-cloud-builder:${_KUBE_CROSS_VERSION}
   dir: "/workspace"
   env:

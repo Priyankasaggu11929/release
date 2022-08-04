@@ -44,9 +44,9 @@ func (k *KubeCross) ForBranch(branch string) (string, error) {
 	logrus.Infof("Trying to retrieve kube-cross version for branch %s", branch)
 
 	const (
-		//baseURL     = "https://raw.githubusercontent.com/kubernetes/kubernetes"
+		baseURL     = "https://raw.githubusercontent.com/kubernetes/kubernetes"
 		//TODO: changed by psaggu
-		baseURL     = "https://raw.githubusercontent.com/Priyankasaggu11929/kubernetes"
+		//baseURL     = "https://raw.githubusercontent.com/Priyankasaggu11929/kubernetes"
 		versionPath = "build/build-image/cross/VERSION"
 	)
 

@@ -372,7 +372,9 @@ func processAssetFiles(assetFiles []string) (releaseAssets []map[string]string, 
 
 		// Verify path exists
 		if !util.Exists(path) {
-			return nil, errors.New("unable to render release page, asset file does not exist")
+			// TODO: psaggu
+			//return nil, errors.New("unable to render release page, asset file does not exist")
+			return nil, fmt.Errorf("unable to render release page, asset file does not exist. Path: %s", path)
 		}
 
 		assetData["realpath"] = path

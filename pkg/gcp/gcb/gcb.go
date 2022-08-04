@@ -360,8 +360,11 @@ func (g *GCB) SetGCBSubstitutions(toolOrg, toolRepo, toolRef string) (map[string
 			kcVersionBranch = kcVersionLatest
 		}
 	}
+	// TODO: tbcb psaggu
+
 	gcbSubs["KUBE_CROSS_VERSION"] = kcVersionBranch
 	gcbSubs["KUBE_CROSS_VERSION_LATEST"] = kcVersionLatest
+	//gcbSubs["KUBE_CROSS_VERSION_LATEST"] = "v1.25.0-go1.18.4-bullseye.0"
 
 	// Stop here when doing a fast-forward
 	if g.options.FastForward {
