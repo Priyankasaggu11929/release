@@ -95,6 +95,7 @@ func CreateForRelease(opts *Options) error {
 
 	changelog := ""
 
+	// TODO: psaggu
 	// Read the changelog from the specified file if we got one
 	if opts.changelogFile != "" {
 		changelogData, err := os.ReadFile(opts.changelogFile)
