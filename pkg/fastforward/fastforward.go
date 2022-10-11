@@ -264,8 +264,9 @@ func prepushMessage(gitRoot, branch, ref, releaseRev, headRev string) {
 		gitRoot,
 		git.Remotify(branch),
 		ref,
-		//git.DefaultGithubOrg,
-		"Priyankasaggu11929",
+		git.DefaultGithubOrg,
+		// TODO: psaggu
+		//"Priyankasaggu11929",
 		git.DefaultGithubRepo,
 		releaseRev,
 		headRev,
@@ -303,8 +304,9 @@ func (f *FastForward) prepareKubernetesRepo() (*git.Repo, error) {
 				Scheme: "https",
 				User:   url.UserPassword("git", token),
 				Host:   "github.com",
-				//Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
-				Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
+				Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
+				// TODO: psaggu
+				//Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
 			}).String()); err != nil {
 				return nil, fmt.Errorf("changing git remote of repository: %w", err)
 			}

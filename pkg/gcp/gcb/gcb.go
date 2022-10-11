@@ -96,6 +96,8 @@ type Options struct {
 	GcpUser      string
 	LogLevel     string
 	LastJobs     int64
+	K8sOrgName   string
+	ToolOrgName  string
 }
 
 // NewDefaultOptions returns a new default `*Options` instance.
@@ -202,7 +204,8 @@ func (g *GCB) Submit() error {
 		return fmt.Errorf("open release repo: %w", err)
 	}
 
-	if err := g.repoClient.CheckState(toolOrg, toolRepo, toolRef, g.options.NoMock); err != nil {
+	//if err := g.repoClient.CheckState(g.options.ToolOrgName, toolRepo, toolRef, g.options.NoMock); err != nil {
+	if err := g.repoClient.CheckState(release.K8sOrgName, toolRepo, toolRef, g.options.NoMock); err != nil {
 		return fmt.Errorf("verifying repository state: %w", err)
 	}
 
@@ -309,11 +312,13 @@ func (g *GCB) Submit() error {
 func (g *GCB) SetGCBSubstitutions(toolOrg, toolRepo, toolRef string) (map[string]string, error) {
 	gcbSubs := map[string]string{}
 
-	gcbSubs["TOOL_ORG"] = toolOrg
+	//TODO: psaggu
+	//gcbSubs["TOOL_ORG"] = toolOrg
 	gcbSubs["TOOL_REPO"] = toolRepo
 	gcbSubs["TOOL_REF"] = toolRef
 
-	gcbSubs["K8S_ORG"] = release.GetK8sOrg()
+	// TODO: psaggu
+	//gcbSubs["K8S_ORG"] = release.GetK8sOrg()
 	gcbSubs["K8S_REPO"] = release.GetK8sRepo()
 	gcbSubs["K8S_REF"] = release.GetK8sRef()
 
@@ -335,6 +340,9 @@ func (g *GCB) SetGCBSubstitutions(toolOrg, toolRepo, toolRef string) (map[string
 	gcbSubs["TYPE_TAG"] = g.options.ReleaseType
 
 	gcbSubs["RELEASE_BRANCH"] = g.options.Branch
+	// TODO: psaggu
+	gcbSubs["K8S_ORG"] = g.options.K8sOrgName
+	gcbSubs["TOOL_ORG"] = g.options.ToolOrgName
 
 	kc := kubecross.New()
 	kcVersionBranch, err := kc.ForBranch(g.options.Branch)
@@ -364,7 +372,6 @@ func (g *GCB) SetGCBSubstitutions(toolOrg, toolRepo, toolRef string) (map[string
 
 	gcbSubs["KUBE_CROSS_VERSION"] = kcVersionBranch
 	gcbSubs["KUBE_CROSS_VERSION_LATEST"] = kcVersionLatest
-	//gcbSubs["KUBE_CROSS_VERSION_LATEST"] = "v1.25.0-go1.18.4-bullseye.0"
 
 	// Stop here when doing a fast-forward
 	if g.options.FastForward {

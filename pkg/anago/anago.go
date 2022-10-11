@@ -70,6 +70,11 @@ type Options struct {
 	// The build version to be released. Has to be specified in the format:
 	// `vX.Y.Z-[alpha|beta|rc].N.C+SHA`
 	BuildVersion string
+
+	//TODO: psaggu
+	K8sOrgName string
+	ToolOrgName string
+
 }
 
 // DefaultOptions returns a new Options instance.
@@ -83,8 +88,8 @@ func DefaultOptions() *Options {
 // String returns a string representation for the `ReleaseOptions` type.
 func (o *Options) String() string {
 	return fmt.Sprintf(
-		"NoMock: %v, ReleaseType: %q, BuildVersion: %q, ReleaseBranch: %q",
-		o.NoMock, o.ReleaseType, o.BuildVersion, o.ReleaseBranch,
+		"NoMock: %v, ReleaseType: %q, BuildVersion: %q, ReleaseBranch: %q, K8sOrgName: %q, ToolOrgName: %q",
+		o.NoMock, o.ReleaseType, o.BuildVersion, o.ReleaseBranch, o.K8sOrgName, o.ToolOrgName,
 	)
 }
 

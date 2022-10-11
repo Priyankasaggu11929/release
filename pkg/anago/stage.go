@@ -297,6 +297,9 @@ func (d *DefaultStage) Submit(stream bool) error {
 	options.NoMock = d.options.NoMock
 	options.Branch = d.options.ReleaseBranch
 	options.ReleaseType = d.options.ReleaseType
+	//TODO: psaggu
+	options.K8sOrgName = d.options.K8sOrgName
+	options.ToolOrgName = d.options.ToolOrgName
 	return d.impl.Submit(options)
 }
 

@@ -102,6 +102,22 @@ func init() {
 
 	stageCmd.PersistentFlags().
 		StringVar(
+			&release.K8sOrgName,
+			"k8s_org",
+			"kubernetes",
+			"The name of the organisation where Kubernetes source code sits",
+		)
+
+	stageCmd.PersistentFlags().
+		StringVar(
+			&stageOptions.ToolOrgName,
+			"tool_org",
+			"kubernetes",
+			"The name of the organisation where Release tool source code sits",
+		)
+
+	stageCmd.PersistentFlags().
+		StringVar(
 			&stageOptions.BuildVersion,
 			buildVersionFlag,
 			"",

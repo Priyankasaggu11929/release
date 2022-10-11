@@ -90,8 +90,9 @@ func PrepareWorkspaceStage(directory string, noMock bool) error {
 			Scheme: "https",
 			User:   url.UserPassword("git", token),
 			Host:   "github.com",
-			//Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
-			Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
+			Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
+			// TODO: psaggu
+			//Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
 		}).String()); err != nil {
 			return fmt.Errorf("changing git remote of repository: %w", err)
 		}
@@ -147,9 +148,9 @@ func PrepareWorkspaceRelease(directory, buildVersion, bucket string) error {
 		Scheme: "https",
 		User:   url.UserPassword("git", token),
 		Host:   "github.com",
+		Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
 		//TODO: psaggu
-		//Path:   filepath.Join(git.DefaultGithubOrg, git.DefaultGithubRepo),
-		Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
+		//Path:   filepath.Join("Priyankasaggu11929", git.DefaultGithubRepo),
 	}).String()); err != nil {
 		return fmt.Errorf("changing git remote of repository: %w", err)
 	}

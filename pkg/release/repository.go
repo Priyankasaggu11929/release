@@ -122,7 +122,10 @@ func (r *Repo) CheckState(expOrg, expRepo, expRev string, nomock bool) error {
 		return fmt.Errorf("revision %q expected but got %q", head, rev)
 	}
 
-	if nomock && !(expOrg == DefaultToolOrg && expRepo == DefaultToolRepo && expRev == DefaultToolRef) {
+	//TODO: psaggu
+	logrus.Infof("expOrg Value is: %q", K8sOrgName)
+	//if nomock && !(expOrg == DefaultToolOrg && expRepo == DefaultToolRepo && expRev == DefaultToolRef) {
+	if nomock && !(expOrg == K8sOrgName && expRepo == DefaultToolRepo && expRev == DefaultToolRef) {
 		return errors.New("disallow using anything other than kubernetes/release:master with nomock flag")
 	}
 
@@ -135,6 +138,8 @@ func (r *Repo) CheckState(expOrg, expRepo, expRev string, nomock bool) error {
 	}
 	var foundRemote *git.Remote
 	for _, remote := range remotes {
+		//TODO: psaggu
+		logrus.Infof("debug statement, org name: %q and remote result is: %q", expOrg, remote)
 		for _, url := range remote.URLs() {
 			if strings.Contains(url, filepath.Join(expOrg, expRepo)) {
 				foundRemote = remote

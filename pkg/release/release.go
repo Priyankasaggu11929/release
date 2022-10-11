@@ -45,9 +45,12 @@ const (
 	DefaultToolRepo = "release"
 	DefaultToolRef  = git.DefaultBranch
 	//DefaultToolOrg  = git.DefaultGithubOrg
+
+	// TODO: psaggu
 	DefaultToolOrg  = "Priyankasaggu11929"
 
 	//DefaultK8sOrg  = git.DefaultGithubOrg
+	// TODO: psaggu
 	DefaultK8sOrg  = "Priyankasaggu11929"
 	DefaultK8sRepo = git.DefaultGithubRepo
 	DefaultK8sRef  = git.DefaultRef
@@ -142,6 +145,8 @@ const (
 )
 
 var (
+	K8sOrgName = ""
+
 	ManifestImages = []string{
 		"conformance",
 		"kube-apiserver",
@@ -162,6 +167,7 @@ var (
 		"amd64",
 	}
 )
+
 
 // GetToolOrg checks if the 'TOOL_ORG' environment variable is set.
 // If 'TOOL_ORG' is non-empty, it returns the value. Otherwise, it returns DefaultToolOrg.
